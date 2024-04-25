@@ -10,7 +10,7 @@ export default function NavBar() {
   return (
     <div
       className="p-4 flex  items-center justify-between max-h-[50px] shadow 
-    text-black "
+    text-[red] "
     >
       <h1 className="text-[32px] cursor-pointer  font-bold font-serif">
         Luxury Motors
