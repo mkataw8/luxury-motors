@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { Link } from "react-scroll";
 export default function NavBar() {
   const [nav, setNav] = useState(true);
-
+  const [click, setClick] = useState(false);
   const handleNav = () => {
     setNav(!nav);
   };
 
+  const closeMenu = () => setClick(false);
   return (
     <div
       className="p-4 flex  items-center justify-between max-h-[50px] shadow 
@@ -17,16 +19,52 @@ export default function NavBar() {
       </h1>
       <ul className=" hidden md:flex tems-center gap-[4vw] ">
         <li href="#" className="cursor-pointer  hover:text-slate-500  ">
-          Process
+          <Link
+            to="process"
+            spy={true}
+            smooth={true}
+            offset={500}
+            duration={850}
+            onClick={closeMenu}
+          >
+            Process
+          </Link>
         </li>
         <li href="#" className="cursor-pointer hover:text-slate-500 ">
-          Payment
+          <Link
+            to="payment"
+            spy={true}
+            smooth={true}
+            offset={500}
+            duration={850}
+            onClick={closeMenu}
+          >
+            Payment
+          </Link>
         </li>
+        {/* <li href="#" className="cursor-pointer hover:text-slate-500 ">
+          <Link
+            to="process"
+            spy={true}
+            smooth={true}
+            offset={500}
+            duration={850}
+            onClick={closeMenu}
+          >
+            Model
+          </Link>
+        </li> */}
         <li href="#" className="cursor-pointer hover:text-slate-500 ">
-          Model
-        </li>
-        <li href="#" className="cursor-pointer hover:text-slate-500 ">
-          About Us
+          <Link
+            to="about"
+            spy={true}
+            smooth={true}
+            offset={500}
+            duration={850}
+            onClick={closeMenu}
+          >
+            About
+          </Link>
         </li>
       </ul>
       <h1 className="">Contact</h1>

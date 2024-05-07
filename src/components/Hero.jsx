@@ -3,7 +3,7 @@ import { ReactTyped } from "react-typed";
 import video from "./lamborghini.mp4";
 const Hero = () => {
   return (
-    <div className="  ">
+    <div className="" id="process">
       <video className=" h-" src={video} autoPlay loop muted height={100} />
 
       <div className="bg-gradient-to-b from-stone-200 to-gray-400">
